@@ -1,0 +1,245 @@
+A1
+
+Perfect!
+
+Don't submit a diagram containing dummy entries like attribute1.
+
+State that name is private, using - (yes, it's tricky in the tool, see solution video for one way!)
+
+You need a Generalization, shown with an unfilled triangle head, between ZoomCall, TeamsCall and VideoCall. If you use a -> head you are showing a navigable Association which is a completely different thing.
+
+You're showing interface realization with the dashed line, not generalization - given that VideoCall is an abstract class not an interface the latter is what you need.
+
+At the VideoCall end of the association with Participant, you need multiplicity 0..1, because the question said that a participant could be in at most one video call.
+
+At the Participant end the multiplicity must be 0..* (or equivalently *) - not 0 (exercise: is 0 ever a useful multiplicity?)
+
+Multiplicities are the wrong way round (i.e. at the wrong ends of the association).
+
+It does not make sense to put multiplicity on a Generalization (between the kinds of calls) - this is a class-level relationship.
+
+The arrow head you have on the association is not right for a UML class diagram, where the navigability arrow is -> (and in any case, you do not have information about navigability so it is better not to show it).
+
+You're showing a dependency between Participant and VideoCall not an Association. Now there always is a dependency when there's an association - but dependency is not an instance-level concept so it doesn't then make sense to put multiplicities on a dependency arrow.
+
+You do not have information about navigability, so probably better not to show any.
+
+You can split the association between VideoCall and Participant into two, but why would you? You then need to have a constraint to make sure that the two are correctly related (e.g. that if p is a participant in v then v is also a videocall of p).
+
+VideoCall needs to be an abstract class - the easiest way to show this is by putting its name in italics.
+
+ZoomCall and TeamsCall should not be abstract, only VideoCall.
+
+It is arguable, but I don't think an aggregation between Participant and VideoCall is really appropriate. A Participant is not really a *part* of a VideoCall, even though we use the phrase "to take part in".
+
+Superfluous extra class.
+
+Really you should name the association (or alternatively the association ends).
+
+This is a long way from right: look at the solution video and revise the class diagram material.
+
+======================================================================
+
+A2
+
+Perfect!
+
+Missing types in lifelines: you need e.g. p1:Participant
+
+You need colons in the lifelines e.g. p1:Participant (but it seems excessively harsh to take a mark off just for this, so I didn't).
+
+The instance of scheduler was supposed to be an actor, so show it as such with a stick figure.
+
+Only the scheduler is an actor.
+
+Use ordinary rectangular instances unless told otherwise - the robustness diagram symbols are not standard in UML.
+
+You create an instance of ZoomCall so show the lifeline as an instance.
+
+ZoomCall is a class name not an instance name!
+
+Give your instance of ZoomCall a name e.g. z, then use that as argument to join.
+
+Show the object creation as usual with a <<create>> message to a new lifeline, that starts at the point of creation.
+
+Strictly speaking the create message wants a <<create>> label or similar and is given a -> head - see solution video.
+
+The source of both join messages should be the scheduler.
+
+Show the reply to the first join message, before the second one is sent.
+
+Check the notation for message and return arrows.
+
+Use message names in events, not English phrases.
+
+Use the join method that you already know about from A1.
+
+It is the scheduler, not the call, that has to send messages to the participants.
+
+join is a method on Participant, not ZoomCall: your message is going in the wrong direction.
+
+What I intended was that the scheduler would directly send the join messages to the participants, but given your comments this is OK.
+
+Good as far as the creation, but then a bit confused.
+
+Good as far as the creation, but then stops making sense. Use the join message on Participant that you already know about. In your version, the participants send messages when nothing has caused them to be active, which doesn't work.
+
+Good as far as the creation, but then stops making sense. Use the join message on Participant that you already know about; have it sent by the scheduler, with the newly-created ZoomCall (which you should name, e.g. z) as argument.
+
+Don't write p1.join etc. - the diagram already shows that the message is going to p1.
+
+Don't forget the argument to join: you must pass the very same ZoomCall object that you just created.
+
+Object creation is special in sequence diagrams: see model solution.
+
+Since join is an ordinary operation, we expect synchronous messages here (i.e. shown with filled black triangle heads), first join sent to p1 and its return, then join sent to p2 and its return.
+
+Use the solid arrow head for synchronous messages.
+
+Why would a message ever have its own recipient as an argument?
+
+Don't destroy the ZoomCall - you were not told to. NB a <<create>> is special - you do not need to show a reply to it.
+
+Don't destroy the scheduler - you were not told to (and in fact, since actors are by definition things outside the boundaries of your system, you can't choose to destroy them!). NB a <<create>> is special - you do not need to show a reply to it.
+
+This is rather a long way from right. Watch the model solution video, and revise the sequence diagram material.
+
+No, this really doesn't make sense. createZoomCall is not, and cannot be, a method on Participant for example. Watch the model solution video, and revise the sequence diagram material.
+
+All in all this doesn't make sense: e.g. how do you think p1 become active in order to send a message? Watch the model solution video, and revise the sequence diagram material.
+
+This is rather a long way from right: e.g. how do you think p1 become active in order to send a message? Watch the model solution video, and revise the sequence diagram material.
+
+This is rather a long way from right: a sequence diagram shows how message pass between instances, not classes, for example. Watch the model solution video, and revise the sequence diagram material.
+
+This is a bit confused. For example, the actor (not something else unseen) should start the interaction, which should involve creation of a ZoomCall object and the join messages that you already know about from A1; and the return from p1 should happen before the message to p2.
+
+Label the creation message <<create>> - see solution video.
+
+You've invented the connect message, though it's quite a reasonable thing to invent.
+
+Check the notation for return arrows.
+
+You've invented the enterCall message, though it's quite a reasonable thing to invent.
+
+=====================================================================
+
+B1
+
+Good
+
+Only the corners of the states should be rounded (not the whole sides).
+
+You need a start pseudostate with a transition into the not in call state.
+
+No event is needed on the transition from the start state (this is just object creation).
+
+There wasn't information about a transition to a final state, and it is not obligatory for state diagrams to have such transitions: don't invent.
+
+Arrow heads on transitions in state diagrams should be -> not LucidChart's default solid triangle or anything else.
+
+You were asked to draw a nested state diagram.
+
+One of the arrows between the muted and unmuted states should be pointing the other way!
+
+I'm not sure why you think an association class would be useful - it might be if we had to keep track of participants' muted status in multiple calls simultaneously, but we know a participant can only be in one call. Or are you thinking about a participant switching between calls and wanting to be in the same state they were in when they go back to the first one? Could be.
+
+Why did you add joinCall when there's already a join??
+
+Be clear that the labels on your transitions are events, in this case, message calls. E.g. use exactly join(v), and where you invent new method names, use consistent capitalisation and make sure what you use on the transitions is exactly consistent with what you have in your class diagram and your note about what else you are adding.
+
+Symbol for a history state is just H, not History.
+
+You need to use a history pseudostate to get the "sticky" behaviour required.
+
+I wonder whether you really understand how history states work? You seem to be trying to duplicate its effect.
+
+I wonder whether you really understand how history states work? You are circumventing its effect by having your transition into the superstate bypass it.
+
+The extra state you have immediately after the start state is redundant - note in particular that it has no event on the transition leading out of it, which is a warning sign. Just leave it out and put the start state transitioning directly into not on a call.
+
+A guard is shown as text on a transition enclosed in [].
+
+A method checking whether a participant is in a call should not change the state of a participant. But you already know about a method that does - join. You then need to invent a corresponding leave.
+
+You need events on the transitions between Muted and Unmuted.
+
+I expected you to invent a leave method which would take you back from the on call to the not on call state - without one, the history state isn't actually any use! But no penalty as the question didn't completely specify.
+
+Correct but can be done a little more simply, see solution video.
+
+NB the videoCall property of Participant already exists - you aren't inventing it!
+
+The state diagram is for Participant, so the call events in it are methods of Participant, not VideoCall.
+
+Say what you've added.
+
+You've added operations not just attributes - and why is leave() in []?
+
+No, this isn't close to what was asked for. Watch the model solution video, and revise the state diagram material.
+
+Show In Call *as* a nested state, rather than having an unlabelled transition between two states both called In Call!
+
+You were told not to add things you didn't need, so you should not add a new attribute to represent whether the participant is in a call: that is already there in the property that is the association end connecting Participant to VideoCall in your class diagram.
+
+Show brackets after the message names e.g. join(), as these are call events.
+
+=====================================================================
+
+B2
+
+OCL excellent - this turned out to be hard for almost everyone!
+
+OCL: missing
+
+OCL: an attempt, but not close enough to correct for marks I'm afraid.
+
+Guard: not done
+
+NB you can only use query methods in OCL constraints, and join is not one (it modifies state).
+
+You were told not to add things you didn't need, so you should not add a new attribute to represent whether the participant is in a call: that is already there in the property that is the association end connecting Participant to VideoCall in your class diagram.
+
+(You're heading towards implementation here.)
+
+Your additions can be regarded as just names for the association ends - which is good, because you were told not to add things you didn't need!
+
+Note that context Participant inv: is not quite right: this whole state diagram is in the context of Participant (so you can assume that), and you are not defining an invariant of the class which is what inv: means.
+
+OCL on the unmuting transition: valiant attempt but not close enough to making sense for marks.
+
+You definitely don't want to use Participant.allInstances because that will make the constraint depend on the states of all objects of class Participant, not only those that are on the same call as self!
+
+It isn't the role of a constraint to assign a new value to an attribute.
+
+What you want on the transition is a guard in []: check you understand guards on state diagram transitions.
+
+Using oclIsInState is a bit circular! What we're trying to do here is "defining the state in terms of the object's properties".
+
+Since the whole diagram is about a particular Participant, when you want to talk about a VideoCall you have to specify which one.
+
+self.participants doesn't make sense when self is a Participant.
+
+Your guard's a little over-complicated but does work!
+
+For not in a call all that you needed was a constraint in {} placed in the state - see solution videos.
+
+Good attempt at the OCL even though it isn't quite right!
+
+=========================================================================
+
+C
+
+3 marks:
+
+Interesting, good comments.
+
+2 marks:
+
+A good point!
+
+Do note that your UML diagram isn't actually correct UML though! (UML doesn't have text inside its decision diamonds, as flow charts may.)
+
+===========================================================================
+
+no submission
