@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Upload Quiz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script defer src="uploadQuizs-script.js"></script>
+  <style>
+    .largeText {
+      font-size: large;
+    }
+    .startButton {
+      background-color: #C73238;
+      color:white;
+      width: 300px;
+      font-size: xx-large;
+    }
+    .helpButton {
+      border: 2px solid #0A335F;
+      border-radius: 200px;
+      font-size: medium;
+      margin-top: 1%;
+      background-color: #9CA9BA;
+    }
+    .background {
+      background-color: #f2f3f5;
+    }
+    .titletext {
+      font-size: 175%;
+      margin-top: 1%;
+    }
+    a {
+        all: unset;
+    }
+    .vertical-center {
+      margin-top: 9%;
+    }
+    </style>
+</head>
+
+<body class="background">
+  <div class="container-fluid text-color page-header">
+    <div class="flex-row justify-content-lg-center">
+      <div class="col-lg-3"> <img src="uofe.png" width="90%" height="90%"> </div>
+      <div class="col-lg-6 text-center titletext"> <b> Software Design and Modelling (2023-2024)[SEM2] </b><br> 
+        Lab Assessment Revision Quiz 
+      </div>
+    </div> 
+  </div>
+    <form>
+        <div class="form-group">
+          <label for="inputQuizName">Quiz Name</label>
+          <input type="text" class="form-control" id="inputQuizName" placeholder="Enter the quiz name" required>
+        </div>
+        <!--<div class="form-group">
+          <label for="exampleFormControlSelect1">Example select</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>-->
+        <div class="form-group">
+          <label for="inputQuizQuestion">Quiz Questions</label>
+          <textarea class="form-control" id="inputQuizQuestion" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="inputQuizFeedbacks">Quiz Feedbacks</label>
+          <textarea class="form-control" id="inputQuizFeedbacks" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+    </form>
+</body>
