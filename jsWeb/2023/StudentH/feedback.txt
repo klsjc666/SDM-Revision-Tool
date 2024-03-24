@@ -1,0 +1,25 @@
+A1: 34
+
+Your Generalization goes the wrong way - it should go from the specific (Victim) to the general (Character).
+
+Question says Victims and Characters can be in "at most one" CrimeStory, implying 0 is possible, so you need 0,1.
+
+There is no need to name an association when it is an aggregation, because "contains" or "is part of" or similar is implied by the aggregation symbol.
+
+A2: 4
+
+The question said to put the OCL invariant in a Note (particular UML shape with a representation of a turned-over corner).
+
+Don't forget the colon after inv
+
+The (default) role name is character, not characters, because it is the name of the class, lower-cased.
+
+Starts well, but c.isVictim isn't defined. See video.
+
+B: 26
+
+The foo method should invoke the init method by sending itself (since in the diagram, the "a" is the same as the object name).
+
+You have an unneeded and unused attribute.
+
+While not explicitly in the diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.

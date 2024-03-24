@@ -1,0 +1,5 @@
+B: 4
+
+The foo and init methods are in the wrong classes.
+
+Most of the functionality in the sequence diagram is not present. Please check the solution video.

@@ -1,0 +1,8 @@
+A1: 39
+
+Question says Victims and Characters can be in "at most one" CrimeStory, implying 0 is possible, so you need 0,1.
+
+A2: 7
+
+The idea of comparing the size of two collections to see whether something is in one but not the other is a good one that often works - but it does not work here, because your model does not ensure that the set of linked Victims is a subset of the set of linked Characters.
+

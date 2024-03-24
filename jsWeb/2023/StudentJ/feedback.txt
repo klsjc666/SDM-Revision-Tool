@@ -1,0 +1,28 @@
+A1: 40
+
+It looks as though you didn't use the Lucid UML notation to the full, e.g. the diamond arrow heads.
+
+A2: 3
+
+The question said to put the OCL invariant in a Note (particular UML shape with a representation of a turned-over corner).
+
+An attempt at the OCL, but doesn't really work - see video for solution.
+
+
+B: 27
+
+The sequence diagram does not show the bar method creating a new object of class A. Instead, consider giving class B an attribute of type A.
+
+While not explicitly in the diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.
+
+C: 4
+
+1. No, this is not an object diagram.
+
+2. omitted
+
+3. Correct!
+
+4. No; fig 17.25 is not an abstract syntax diagram in fact.
+
+5. omitted

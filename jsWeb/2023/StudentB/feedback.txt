@@ -1,0 +1,16 @@
+A1: 40
+
+I was going to say, don't invent, re numOfCharacters, numOfVictims - then I saw that you had cheekily invented that in order to make A2 doable! I will not penalise it here, but also not allow it there. See video for what was expected.
+
+A2: 4
+
+An attempt at the OCL, but doesn't really work - see video for solution.
+
+
+
+
+B: 30
+
+Well done!
+
+While not explicitly in the diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.

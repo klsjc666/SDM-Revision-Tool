@@ -1,0 +1,19 @@
+A1: 35
+
+You were asked to show aggregations to CrimeStory (diamond arrow heads).
+
+A2: 5
+
+The (default) role name is character, not characters, because it is the name of the class, lower-cased.
+
+Refer to the instance of CrimeStory being checked as self, unless you've given it a name by e.g. context cs:CrimeStory inv:.
+
+An attempt at the OCL, but doesn't really work - see video for solution.
+
+B: 30
+
+Well done!
+
+For B's init method, a void return type is more plausible given that the diagram is showing return values but doesn't show one on the reply to init.
+
+Code could have been kept simpler by not having unneeded constructor declarations.

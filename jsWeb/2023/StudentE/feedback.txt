@@ -1,0 +1,30 @@
+A1: 38
+
+There is no need to name an association when it is an aggregation, because "contains" or "is part of" or similar is implied by the aggregation symbol.
+
+And, you wouldn't normally have both an association name and role names.
+
+The multiplicity at Victim should be 1..* - "at least one Victim"
+
+A2: 3
+
+Don't put brackets round your OCL when it is in a Note. (When OCL is placed directly on a diagram, you use [] to denote a guard, and {} to denote a constraint, but the brackets are not part of the OCL.)
+
+An attempt at the OCL, but doesn't really work - see video for solution.
+
+B: 30
+
+Well done!
+
+While not explicitly in the diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.
+
+C: 9
+
+1. Syntax: in an object diagram the instanceName : ClassifierName needs to be underlined.
+
+1. This is a bit confused: e.g. you need to show two instances of Object and two of Class.
+
+3. Correct!
+
+4. Correct!
+

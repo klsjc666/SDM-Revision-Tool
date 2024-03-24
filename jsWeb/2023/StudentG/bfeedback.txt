@@ -1,0 +1,7 @@
+B: 30
+
+Well done!
+
+While not explicitly in the class diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.
+
+Note that you should try to avoid using var as a type whenever you can. Here you know the types of the variables, so you can just use those.

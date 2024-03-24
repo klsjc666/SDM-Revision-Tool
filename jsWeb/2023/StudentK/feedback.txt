@@ -1,0 +1,19 @@
+A1: 40
+
+Perfect!
+
+Conventionally, when you put in attribute or operation compartments, you normally put in both.
+
+A2: 10
+
+This is fine, but more complicated than it needs to be - as an invariant on CrimeStory, you just need to write an expression that is true of each CrimeStory instance. You refer to the one you're currently checking, as it were, as self. No need to write about allInstances, that's implicit in it being an invariant.
+
+B: 30
+
+Well done!
+
+While not explicitly in the diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.
+
+C: 4
+
+1. Good! You could have shown the attribute value name = "foo" in your Operation, but this is enough for the part 1 marks.

@@ -1,0 +1,13 @@
+A1: 40
+
+Perfect!
+
+There is no need to name an association when it is an aggregation, because "contains" or "is part of" or similar is implied by the aggregation symbol.
+
+A2: 3
+
+This is an invariant on CrimeStory, so your opening line needs to be "context CrimeStory inv:"
+
+The (default) role name is character, not characters, because it is the name of the class, lower-cased.
+
+An attempt at the OCL, but doesn't really work - see video for solution.

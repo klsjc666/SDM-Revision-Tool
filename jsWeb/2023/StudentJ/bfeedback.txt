@@ -1,0 +1,5 @@
+B: 27
+
+The sequence diagram does not show the bar method creating a new object of class A. Instead, consider giving class B an attribute of type A.
+
+While not explicitly in the class diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.

@@ -1,0 +1,11 @@
+A1: 40
+
+I was going to say, don't invent, re numOfCharacters, numOfVictims - then I saw that you had cheekily invented that in order to make A2 doable! I will not penalise it here, but also not allow it there. See video for what was expected.
+
+A2: 4
+
+An attempt at the OCL, but doesn't really work - see video for solution.
+
+
+
+

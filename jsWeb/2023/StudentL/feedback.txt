@@ -1,0 +1,11 @@
+A1: 35
+
+You need an aggregation from Victim to CrimeStory, not just from Character to CrimeStory.
+
+A2: 0
+
+No OCL given so I can't give marks; but on the positive side, what you did does communicate!
+
+B: 30
+
+Well done!

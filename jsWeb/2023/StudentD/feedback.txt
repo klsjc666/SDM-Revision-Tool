@@ -1,0 +1,20 @@
+A1: 40
+
+Perfect!
+
+A2: 7
+
+Starts well, but c.victim isn't defined. See video.
+
+
+B: 30
+
+Well done!
+
+While not explicitly in the diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.
+
+C: 6
+
+3. Correct!
+
+4. Partial credit for Fig 17.18 as Lifeline does occur in it, but really the relevant diagram is 17.6.

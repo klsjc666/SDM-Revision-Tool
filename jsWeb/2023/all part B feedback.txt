@@ -1,0 +1,53 @@
+There was no need to create a main method.
+
+Well done!
+
+While not explicitly in the diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.
+
+Your code does not compile because of syntax issues.
+
+You need an invocation of init inside A's foo method.
+
+The sequence diagram does not show the bar method creating a new object of class A. Instead, consider giving class B an attribute of type A.
+
+For B's init method, a void return type is more plausible given that the diagram is showing return values but doesn't show one on the reply to init.
+
+Most of the functionality in the sequence diagram is not present. Please check the solution video.
+
+You have an unneeded and unused attribute.
+
+Code could have been kept simpler by not having unneeded constructor declarations.
+
+Note that while comments are generally good, you should not use them for very simple and obvious operations, as that can actually make the code less readable.
+
+Your code does not compile because your methods are static.
+
+The init method is entirely missing from B. The foo method in A should invoke it.
+
+Your code does not compile due to an object being undefined.
+
+The foo and init methods are in the wrong classes.
+
+The diagram suggests there should not be a call to the init method within B's constructor. In fact, init is only called once, in the foo method.
+
+The bar method should return the result of a.foo() rather than "this".
+
+The foo method should invoke the init method by sending itself (since in the diagram, the "a" is the same as the object name).
+
+Classes aren't properly defined. Unclear what the method Act() is or why it's needed. Most of the sequence diagram's functionality isn't properly implemented.
+
+The foo method should return an object of type B according to the diagram.
+
+There is superfluous/unneeded code - the goal was for the code to be as simple as possible.
+
+Part B missing.
+
+The first a.foo() call is not needed.
+
+There is no if-statement shown in the diagram, and since the task was to make the simplest code possible, there should also not be an if-else statement in the code.
+
+The returns for foo and bar were not arbitrary - they are b2, which is an object of type B.
+
+Note that you should try to avoid using var as a type whenever you can. Here you know the types of the variables, so you can just use those.
+
+Why does your foo send the newly created B object the bar message? There's no sign of that in the sequence diagram.

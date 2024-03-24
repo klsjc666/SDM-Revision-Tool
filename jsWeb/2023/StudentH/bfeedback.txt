@@ -1,0 +1,7 @@
+B: 26
+
+The foo method should invoke the init method by sending itself (since in the diagram, the "a" is the same as the object name).
+
+You have an unneeded and unused attribute.
+
+While not explicitly in the class diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.

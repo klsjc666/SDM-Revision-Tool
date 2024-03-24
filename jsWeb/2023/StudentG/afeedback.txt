@@ -1,0 +1,12 @@
+A1: 39
+
+Question says Victims and Characters can be in "at most one" CrimeStory, implying 0 is possible, so you need 0,1.
+
+I was expecting multiplicity 1..* at Victim, but I have allowed 1..10 as a deduction from the question text, taking into account that it is reasonable to assume that there is a subset relationship between the links of the aggregation from Victim to CrimeStory and the links between Character and CrimeStory. But be aware that that's not automatic from the model - those aggregations could be independent.
+
+A2: 8
+
+The question said to put the OCL invariant in a Note (particular UML shape with a representation of a turned-over corner).
+
+The (default) role name is character, not characters, because it is the name of the class, lower-cased.
+

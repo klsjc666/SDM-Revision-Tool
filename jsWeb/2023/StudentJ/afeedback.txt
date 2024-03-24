@@ -1,0 +1,11 @@
+A1: 40
+
+It looks as though you didn't use the Lucid UML notation to the full, e.g. the diamond arrow heads.
+
+A2: 2
+
+The question said to put the OCL invariant in a Note (particular UML shape with a representation of a turned-over corner).
+
+An attempt at the OCL, but doesn't really work - see video for solution.
+
+

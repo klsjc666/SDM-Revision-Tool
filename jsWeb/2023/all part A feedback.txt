@@ -1,0 +1,167 @@
+Perfect!
+
+As a matter of style, try not to let your lines wiggle so much!
+
+I am generously not penalising, but NB you were asked to submit A.pdf.
+
+Show the visibility and type of isMurderer.
+
+isMurderer, not isMurder
+
+isMurderer, not isMurdered
+
+isMurderer, not isMuderer
+
+synopsis, not synopsys
+
+synopsis, not sypnosis
+
+isMurderer should be in the middle compartment - the lowest of the three is for operations.
+
+synopsis is an operation, so you should have synopsis() : String in the lowest of three compartments.
+
+syntax for showing synopsis returns String is just synopsis() : String
+
+Multiplicity at Detective end of the aggregation should be 1,2.
+
+You do not have information about the navigability of the associations, so it's better not to put it in.
+
+If you do show navigability on an association (including an aggregation) you need to use an open arrow head ->
+
+The relationship between Victim and Character needs to be a Generalization (triangle arrow head).
+
+Don't name a Generalization - it automatically means extends.
+
+Your Generalization goes the wrong way - it should go from the specific (Victim) to the general (Character).
+
+You can't have a multiplicity on a Generalization - that makes no sense, because a Generalization is a relationship between the classes, not between any particular sets of objects.
+
+You need an aggregation from Victim to CrimeStory, not just from Character to CrimeStory.
+
+You were asked to show aggregations to CrimeStory (diamond arrow heads).
+
+Association names should be verbs (role names can be nouns).
+
+A role name needs to be shown near the end of the association, at the class taking the role.
+
+Your role names are a bit confused. While association names (shown in the middle of an association) are verbs, role names are nouns, and describe the role played by the nearby class in the association to the far away class. E.g. you might (though it is redundant) put "part" at the part end of an aggregation and "whole" at the whole end.
+
+If you use role names, they should be unique, i.e. if you give a class and a rolename that should specify just one other class - otherwise there's not much point, as the main purpose of role names is to be able to use them to define sets of linked objects.
+
+Your "read this way" filled in triangle is pointing the wrong way - it tells us to read it "Crime Story is murdered in Victim"! And NB we have to read the leftmost aggregation upwards, so that's the one that really needs one. However, there was actually no need to name the associations, as with aggregations "contains" or similar is implicit.
+
+There is no need to name an association when it is an aggregation, because "contains" or "is part of" or similar is implied by the aggregation symbol.
+
+And, you wouldn't normally have both an association name and role names.
+
+Conventionally, when you put in attribute or operation compartments, you normally put in both.
+
+You need to have a separate aggregation diamond at CrimeStory for each of the three aggregations, or at least, a separate one for the aggregation to Detective, because you can't have two different multiplicities on the same association end.
+
+You have the multiplicities at the wrong ends of the associations.
+
+Question says Victims and Characters can be in "at most one" CrimeStory, implying 0 is possible, so you need 0,1.
+
+Where did you get 3..7 from, I wonder?
+
+Where did you get 1..8 from, I wonder?
+
+You are missing your * from 1..*
+
+The multiplicity at Victim should be 1..* - "at least one Victim"
+
+I was expecting multiplicity 1..* at Victim, but I have allowed 1..10 as a deduction from the question text, taking into account that it is reasonable to assume that there is a subset relationship between the links of the aggregation from Victim to CrimeStory and the links between Character and CrimeStory. But be aware that that's not automatic from the model - those aggregations could be independent.
+
+Put multiplicities next to the association lines, not on top of them.
+
+Don't allow an aggregation line to merge with a generalization line - they are completely different kinds of relationship, so that makes no sense.
+
+Your aggregations and associations here are very confused - see video. The diamond decorates the "whole" end of an association that represents a whole-part relationship.
+
+Your aggregations are the wrong way round - the diamond decorates the "whole" end of an association that represents a whole-part relationship.
+
+I can't make sense of the association you give between Victim and Character, especially given the multiplicities.
+
+It looks as though you didn't use the Lucid UML notation to the full, e.g. the diamond arrow heads.
+
+I was going to say, don't invent, re numOfCharacters, numOfVictims - then I saw that you had cheekily invented that in order to make A2 doable! I will not penalise it here, but also not allow it there. See video for what was expected.
+
+============================================================================================
+
+A2
+
+No submission.
+
+Perfect!
+
+This is fine, but more complicated than it needs to be - as an invariant on CrimeStory, you just need to write an expression that is true of each CrimeStory instance. You refer to the one you're currently checking, as it were, as self. No need to write about allInstances, that's implicit in it being an invariant.
+
+The question said to put the OCL invariant in a Note (particular UML shape with a representation of a turned-over corner).
+
+If you attach your Note to anything in the diagram (you do not need to, provided you state the context) do so by a dashed line to CrimeStory.
+
+Don't put brackets round your OCL when it is in a Note. (When OCL is placed directly on a diagram, you use [] to denote a guard, and {} to denote a constraint, but the brackets are not part of the OCL.)
+
+This is an invariant on CrimeStory, so your opening line needs to be "context CrimeStory inv:"
+
+Don't forget the colon after inv
+
+If you give your CrimeStory a name, e.g. writing context cs:CrimeStory inv:, then inside the invariant you should refer to the instance as cs, not as self; otherwise there was no point in giving it a name!
+
+Real nitpick: in OCL the reserved word is true, not True. (True exists, but is a semantic value: true evaluates to True.)
+
+Real nitpick: in OCL the reserved word is false, not False. (False exists, but is a semantic value: false evaluates to False.)
+
+The (default) role name is character, not characters, because it is the name of the class, lower-cased.
+
+The (default) role name is character, not Character - it is the name of the class, lower-cased.
+
+self not Self - case is significant
+
+I'm assuming here that you intended characters in your diagram to be a role name, and not re-penalising.
+
+The question asked that there should be at least one character who is *not* a Victim.
+
+The idea of comparing the size of two collections to see whether something is in one but not the other is a good one that often works - but it does not work here, because your model does not ensure that the set of linked Victims is a subset of the set of linked Characters.
+
+length isn't defined on a Set
+
+Not really OCL! See solution in the video.
+
+No OCL given so I can't give marks; but on the positive side, what you did does communicate!
+
+The OCL the question asked for was nothing to do with isMurderer, not sure what your intention is here!
+
+An attempt at the OCL, but doesn't really work - see video for solution.
+
+(E.g. your version has no connection between a particular CrimeStory object and *its* Characters.)
+
+You have a missing closing ) in your OCL - also note that in the context of your diagram, which doesn't show a generalization between Victim and Character, your OCL doesn't really say a sensible thing, because no Character object can satisfy oclIsTypeOf(Victim)! But if your diagram were correct your OCL would be (almost) correct.
+
+Starts well, but c.victim isn't defined. See video.
+
+Starts well, but c.isVictim isn't defined. See video.
+
+Starts well, but c.name isn't defined, and in any case having name "Victim" is a different thing from being a Victim. See video.
+
+Starts well, but OCL doesn't have "in" syntax like that. You could have done something similar using ->includes, but see video for an easier way.
+
+Starts well, but the contents of your exists bracket don't make sense. See video.
+
+Equality checking in OCL is =, not == (which makes sense as, not being an imperative language, it does not need to use = for assignment).
+
+All the linked Characters will have ocltype Character, so this isn't what you want to say!
+
+The shape makes it a Note - you don't have to write Note!
+
+Slightly overcomplicated, because for every c in self.character it is automatically the case that c.oclIsTypeOf(Character) is true!
+
+You don't need this assumption about adding an attribute, because an association end owned by a class is a property, just like an attribute is. A code generator will likely treat the two things the same way.
+
+self.Character.allInstances is confusing two things. self.character (lower case) is the set of instances of Character that are linked to self. That's the set you want. Character.allInstances() (upper case) is the set of all instances of Character, regardless of what they're linked to. That's not a set you're interested in. 
+
+self is not a set
+
+Close to correct, but > is not defined on sets. 
+
+Refer to the instance of CrimeStory being checked as self, unless you've given it a name by e.g. context cs:CrimeStory inv:.

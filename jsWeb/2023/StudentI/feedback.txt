@@ -1,0 +1,19 @@
+A1: 40
+
+Perfect!
+
+There is no need to name an association when it is an aggregation, because "contains" or "is part of" or similar is implied by the aggregation symbol.
+
+A2: 3
+
+This is an invariant on CrimeStory, so your opening line needs to be "context CrimeStory inv:"
+
+The (default) role name is character, not characters, because it is the name of the class, lower-cased.
+
+An attempt at the OCL, but doesn't really work - see video for solution.
+
+B: 30
+
+Well done!
+
+While not explicitly in the diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.

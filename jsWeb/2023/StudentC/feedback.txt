@@ -1,0 +1,17 @@
+A1: 40
+
+There is no need to name an association when it is an aggregation, because "contains" or "is part of" or similar is implied by the aggregation symbol.
+
+A2: 2
+
+Don't put brackets round your OCL when it is in a Note. (When OCL is placed directly on a diagram, you use [] to denote a guard, and {} to denote a constraint, but the brackets are not part of the OCL.)
+
+This is an invariant on CrimeStory, so your opening line needs to be "context CrimeStory inv:"
+
+Not really OCL! See solution in the video.
+
+B: 4
+
+The foo and init methods are in the wrong classes.
+
+Most of the functionality in the sequence diagram is not present. Please check the solution video.
