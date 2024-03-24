@@ -1,0 +1,11 @@
+A1: 30
+
+You can't have a multiplicity on a Generalization - that makes no sense, because a Generalization is a relationship between the classes, not between any particular sets of objects.
+
+You need an aggregation from Victim to CrimeStory, not just from Character to CrimeStory.
+
+A2: 3
+
+The question said to put the OCL invariant in a Note (particular UML shape with a representation of a turned-over corner).
+
+An attempt at the OCL, but doesn't really work - see video for solution.

@@ -1,0 +1,13 @@
+A1: 38
+
+isMurderer, not isMurder
+
+synopsis, not synopsys
+
+A2: 5
+
+Don't put brackets round your OCL when it is in a Note. (When OCL is placed directly on a diagram, you use [] to denote a guard, and {} to denote a constraint, but the brackets are not part of the OCL.)
+
+self is not a set
+
+An attempt at the OCL, but doesn't really work - see video for solution.

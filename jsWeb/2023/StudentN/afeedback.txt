@@ -1,0 +1,7 @@
+A1: 36
+
+Show the visibility and type of isMurderer.
+
+A2: 3
+
+An attempt at the OCL, but doesn't really work - see video for solution.

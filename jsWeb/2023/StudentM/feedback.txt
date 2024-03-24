@@ -1,0 +1,17 @@
+A1: 40
+
+Perfect!
+
+A2: 10
+
+Perfect!
+
+B: 30
+
+Well done!
+
+C: 8
+
+3. Correct!
+
+4. I'll give you this (17.3.2), though the figure number is actually 17.6 !

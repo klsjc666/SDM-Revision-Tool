@@ -1,0 +1,5 @@
+B: 22
+
+The bar method should return the result of a.foo() rather than "this".
+
+The foo method should invoke the init method by sending itself (since in the diagram, the "a" is the same as the object name).

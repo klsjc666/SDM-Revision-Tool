@@ -1,0 +1,17 @@
+A1: 39
+
+Question says Victims and Characters can be in "at most one" CrimeStory, implying 0 is possible, so you need 0,1.
+
+A2: 7
+
+Don't put brackets round your OCL when it is in a Note. (When OCL is placed directly on a diagram, you use [] to denote a guard, and {} to denote a constraint, but the brackets are not part of the OCL.)
+
+Starts well, but c.isVictim isn't defined. See video.
+
+B: 17
+
+The bar method should return the result of a.foo() rather than "this".
+
+The foo method should invoke the init method by sending itself (since in the diagram, the "a" is the same as the object name).
+
+Why does your foo send the newly created B object the bar message? There's no sign of that in the sequence diagram.

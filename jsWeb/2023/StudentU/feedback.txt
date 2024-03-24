@@ -1,0 +1,21 @@
+A1: 27
+
+Your Generalization goes the wrong way - it should go from the specific (Victim) to the general (Character).
+
+Your aggregations are the wrong way round - the diamond decorates the "whole" end of an association that represents a whole-part relationship.
+
+There is no need to name an association when it is an aggregation, because "contains" or "is part of" or similar is implied by the aggregation symbol.
+
+isMurderer should be in the middle compartment - the lowest of the three is for operations.
+
+A2: 2
+
+The question said to put the OCL invariant in a Note (particular UML shape with a representation of a turned-over corner).
+
+Not really OCL! See solution in the video.
+
+B: 30
+
+Well done!
+
+While not explicitly in the diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.

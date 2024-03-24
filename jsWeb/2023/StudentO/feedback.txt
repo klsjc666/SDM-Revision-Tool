@@ -1,0 +1,17 @@
+A1: 40
+
+Perfect!
+
+A2: 9
+
+The (default) role name is character, not characters, because it is the name of the class, lower-cased.
+
+B: 30
+
+Well done!
+
+C: 8
+
+3. Correct!
+
+4. Correct!

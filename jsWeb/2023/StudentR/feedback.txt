@@ -1,0 +1,19 @@
+A1: 38
+
+isMurderer, not isMurder
+
+synopsis, not synopsys
+
+A2: 5
+
+Don't put brackets round your OCL when it is in a Note. (When OCL is placed directly on a diagram, you use [] to denote a guard, and {} to denote a constraint, but the brackets are not part of the OCL.)
+
+self is not a set
+
+An attempt at the OCL, but doesn't really work - see video for solution.
+
+B: 20
+
+Your code does not compile due to an object being undefined.
+
+While not explicitly in the diagram, it is reasonable to expect that there's some purpose to passing an A as an argument to B's init method, and hence assigning B's attribute of type A inside init would make sense.

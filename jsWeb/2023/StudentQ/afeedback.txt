@@ -1,0 +1,13 @@
+A1: 36
+
+syntax for showing synopsis returns String is just synopsis() : String
+
+A2: 3
+
+This is an invariant on CrimeStory, so your opening line needs to be "context CrimeStory inv:"
+
+The (default) role name is character, not Character - it is the name of the class, lower-cased.
+
+An attempt at the OCL, but doesn't really work - see video for solution.
+
+

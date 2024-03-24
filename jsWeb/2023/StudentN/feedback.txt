@@ -1,0 +1,23 @@
+A1: 37
+
+Show the visibility and type of isMurderer.
+
+A2: 3
+
+An attempt at the OCL, but doesn't really work - see video for solution.
+
+B: 30
+
+Well done!
+
+C: 12
+
+1. Your diagram does not fully conform to the metamodel. E.g. every Message is supposed to be linked to its source and its target Objects (but not to the corresponding Class), as well as to the Operation it's an invocation of.
+
+2. omitted
+
+3. Correct!
+
+4. Correct!
+
+5. Good as far as it goes but a little non-specific!

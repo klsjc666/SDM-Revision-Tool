@@ -1,0 +1,11 @@
+A1: 35
+
+You were asked to show aggregations to CrimeStory (diamond arrow heads).
+
+A2: 7
+
+The question said to put the OCL invariant in a Note (particular UML shape with a representation of a turned-over corner).
+
+The (default) role name is character, not characters, because it is the name of the class, lower-cased.
+
+Close to correct, but > is not defined on sets. 

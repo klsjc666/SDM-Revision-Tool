@@ -1,0 +1,5 @@
+B: 25
+
+The foo method should return an object of type B according to the diagram.
+
+For B's init method, a void return type is more plausible given that the diagram is showing return values but doesn't show one on the reply to init.
