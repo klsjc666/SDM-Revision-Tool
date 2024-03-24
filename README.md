@@ -3,7 +3,7 @@ This project is a revision website for SDM course, it uses js as frontend and ja
 
 The starting screen is encoded in file index.html, the help screen in file help.html, the main questions screen in file questions.html, and the final screen in finish.html.
 
-The JavaScript file implementing all functionality is newScript.js.
+The JavaScript file implementing all functionality is new-script.js.
 
 jsWeb is the webpage written by html and javascript, which is the one in use.
 
