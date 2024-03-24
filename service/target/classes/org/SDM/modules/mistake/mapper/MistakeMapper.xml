@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.SDM.modules.mistake.mapper.MistakeMapper">
+    <select id="selectCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(1) from mistake T where 1=1
+    </select>
+
+    <select id="findAll" resultType="org.SDM.modules.mistake.entity.Mistake" parameterType="java.util.Map">
+        select mistake_id, ANSWER_ID, feedback_numbers, recent
+        from mistake T where 1=1
+        <if test="feedbackNumbers != null and feedbackNumbers != ''"> and T.FEEDBACK_NUMBERS like concat('%',#{answerType,jdbcType=VARCHAR},'%')</if>
+        <if test="answerId != null and answerId != ''"> and T.ANSWER_ID like concat('%',#{answerId,jdbcType=VARCHAR},'%')</if>
+        <if test="recent != null and recent != ''"> and T.RECENT like concat('%',#{recent,jdbcType=VARCHAR},'%')</if>
+    </select>
+
+    <select id="selectByPK" resultType="org.SDM.modules.mistake.entity.Mistake" parameterType="org.SDM.modules.mistake.entity.Mistake">
+        select mistake_id, ANSWER_ID, feedback_numbers, recent
+        from mistake T
+        where T.MISTAKE_ID = #{mistakeId}
+    </select>
+
+    <insert id="insert" parameterType="org.SDM.modules.mistake.entity.Mistake">
+        insert ignore into mistake (MISTAKE_ID, ANSWER_ID, FEEDBACK_NUMBERS, RECENT)
+        values (#{mistakeId}, #{answerId}, #{feedbackNumbers}, #{recent})
+    </insert>
+
+    <update id="update" parameterType="org.SDM.modules.mistake.entity.Mistake">
+        update mistake
+        set RECENT = #{recent}
+        where MISTAKE_ID = #{mistakeId}
+    </update>
+
+    <delete id="deleteByParams" parameterType="java.util.Map">
+        delete from mistake where 1=1
+    </delete>
+
+    <delete id="deleteByIds" parameterType="java.util.Map">
+        delete from mistake where 1=1
+        <foreach collection="list" item="id" index="index" open=" and answer_ID in(" close=")" separator=",">
+            #{mistakeId.jdbcType=VARCHAR}
+        </foreach>
+    </delete>
+
+    <delete id="delete" parameterType="org.SDM.modules.mistake.entity.Mistake">
+        delete from mistake
+        where MISTAKE_ID = #{mistakeId,jdbcType=VARCHAR}
+    </delete>
+
+</mapper>

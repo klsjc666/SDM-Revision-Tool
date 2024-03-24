@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.SDM.modules.quiz.mapper.FeedbackMapper">
+
+    <select id="selectCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(1) from feedback T where 1=1
+    </select>
+
+    <select id="findAll" resultType="org.SDM.modules.quiz.entity.Feedback" parameterType="java.util.Map">
+        select FEEDBACK_ID, QUIZ_ID, FEEDBACK_NUMBER, FEEDBACK_TEXT
+        from feedback T where 1=1
+        <if test="quizId != null and quizId != ''"> and T.QUIZ_ID = #{quizId, jdbcType=VARCHAR}</if>
+        <if test="feedbackNumber != null and feedbackNumber != ''"> and T.FEEDBACK_NUMBER = #{feedbackNumber, jdbcType=VARCHAR}</if>
+    </select>
+
+    <select id="selectByPK" resultType="org.SDM.modules.quiz.entity.Feedback" parameterType="org.SDM.modules.quiz.entity.Feedback">
+        select FEEDBACK_ID, QUIZ_ID, FEEDBACK_NUMBER, FEEDBACK_TEXT
+        from feedback T
+        where T.QUIZ_ID = #{quizId} and T.FEEDBACK_NUMBER = #{feedbackNumber}
+    </select>
+
+    <insert id="insert" parameterType="org.SDM.modules.quiz.entity.Feedback">
+        insert ignore into feedback (feedback_id, quiz_id, feedback_number, feedback_text)
+        values (#{feedbackId}, #{quizId}, #{feedbackNumber}, #{feedbackText})
+    </insert>
+
+    <update id="update" parameterType="org.SDM.modules.quiz.entity.Feedback">
+        update feedback T
+        set FEEDBACK_TEXT = #{feedbackText}
+        where T.QUIZ_ID = #{quizId} and T.FEEDBACK_NUMBER = #{feedbackNumber}
+    </update>
+
+    <delete id="deleteByParams" parameterType="java.util.Map">
+        delete from feedback where 1=1
+    </delete>
+
+    <delete id="deleteByIds" parameterType="java.util.Map">
+        delete from feedback where 1=1
+        <foreach collection="list" item="id" index="index" open=" and QUIZ_ID in(" close=")" separator=",">
+            #{quizId.jdbcType=VARCHAR}
+        </foreach>
+    </delete>
+
+    <delete id="delete" parameterType="org.SDM.modules.quiz.entity.Feedback">
+        delete from feedback T
+        where T.QUIZ_ID = #{quizId} and T.FEEDBACK_NUMBER = #{feedbackNumber}
+    </delete>
+
+</mapper>

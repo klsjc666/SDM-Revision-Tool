@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.SDM.modules.quiz.mapper.AnswerMapper">
+
+    <select id="selectCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+        select count(1) from answer T where 1=1
+    </select>
+
+    <select id="findAll" resultType="org.SDM.modules.quiz.entity.Answer" parameterType="java.util.Map">
+        select answer_id, answer_type, quiz_id, picture, feedback, approved, MISTAKES_COUNT, MOST_MISTAKES
+        from answer T where 1=1
+        <if test="answerType != null and answerType != ''"> and T.ANSWER_TYPE like concat('%',#{answerType,jdbcType=VARCHAR},'%')</if>
+        <if test="quizId != null and quizId != ''"> and T.QUIZ_ID like concat('%',#{quizId,jdbcType=VARCHAR},'%')</if>
+        <if test="feedback != null and feedback != ''"> and T.FEEDBACK like concat('%',#{feedback,jdbcType=VARCHAR},'%')</if>
+        <if test="approved != null and approved != ''"> and T.APPROVED like concat('%',#{approved,jdbcType=VARCHAR},'%')</if>
+        <if test="mistakesCount != null and mistakesCount != ''"> and T.MISTAKES_COUNT like concat('%',#{mistakesCount,jdbcType=INTEGER},'%')</if>
+        <if test="mostMistakes != null and mostMistakes != ''"> and T.MOST_MISTAKES like concat('%',#{mostMistakes,jdbcType=VARCHAR},'%')</if>
+    </select>
+
+    <select id="selectByPK" resultType="org.SDM.modules.quiz.entity.Answer" parameterType="org.SDM.modules.quiz.entity.Answer">
+        select answer_id, answer_type, quiz_id, picture, feedback, approved, MISTAKES_COUNT, MOST_MISTAKES
+        from answer T
+        where T.ANSWER_ID = #{answerId}
+    </select>
+
+    <insert id="insert" parameterType="org.SDM.modules.quiz.entity.Answer">
+        insert ignore into answer (answer_id, answer_type, quiz_id, picture, feedback, approved, MISTAKES_COUNT, MOST_MISTAKES)
+        values (#{answerId}, #{answerType}, #{quizId}, #{picture}, #{feedback}, #{approved}, #{mistakesCount}, #{mostMistakes})
+    </insert>
+
+    <update id="update" parameterType="org.SDM.modules.quiz.entity.Answer">
+        update answer
+        set answer_type = #{answerType},
+            picture = #{picture},
+            feedback = #{feedback},
+            approved = #{approved},
+            MISTAKES_COUNT = #{mistakesCount},
+            MOST_MISTAKES = #{mostMistakes}
+        where answer_id = #{answerId}
+    </update>
+
+    <delete id="deleteByParams" parameterType="java.util.Map">
+        delete from answer where 1=1
+    </delete>
+
+    <delete id="deleteByIds" parameterType="java.util.Map">
+        delete from answer where 1=1
+        <foreach collection="list" item="id" index="index" open=" and answer_ID in(" close=")" separator=",">
+            #{answerId.jdbcType=VARCHAR}
+        </foreach>
+    </delete>
+
+    <delete id="delete" parameterType="org.SDM.modules.quiz.entity.Answer">
+        delete from answer
+        where answer_ID = #{answerId,jdbcType=VARCHAR}
+    </delete>
+
+</mapper>
